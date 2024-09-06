@@ -5,14 +5,14 @@
   <input
     type="text"
     id="input_text"
-    :value="props.modelValue"
+    :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
     :style="{ height: childHeight, width: childWidth }"
   />
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   modelValue: String,
   textTag: String,
   childHeight: String,
